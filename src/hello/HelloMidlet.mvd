@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MVDData version="1.2">
+    <DesignDocument designVersion="MIDP-2" uidCounter="6">
+        <DesignComponent uid="0" id="$MobileDevice" typeid="MIDP:$MobileDevice"/>
+        <DesignComponent uid="1" id="$StartPoint" typeid="MIDP:$StartPoint">
+            <Property value="helloForm" name="targetDisplayable"/>
+            <Property name="targetForwardDisplayable"/>
+        </DesignComponent>
+        <DesignComponent uid="2" id="helloForm" typeid="MIDP:javax.microedition.lcdui.Form">
+            <ContainerProperty name="commands">
+                <ContainerPropertyItem value="$CommandAction"/>
+            </ContainerProperty>
+            <ContainerProperty name="items">
+                <ContainerPropertyItem value="helloStringItem"/>
+            </ContainerProperty>
+        </DesignComponent>
+        <DesignComponent uid="3" id="$CommandAction" typeid="MIDP:CommandAction">
+            <Property value="$MobileDevice" name="targetDisplayable"/>
+            <Property name="targetForwardDisplayable"/>
+            <Property value="exitCommand" name="actionSource"/>
+            <Property value="helloForm" name="actionOrigin"/>
+        </DesignComponent>
+        <DesignComponent uid="4" id="helloStringItem" typeid="MIDP:javax.microedition.lcdui.StringItem">
+            <Property value="STRING:Hello" name="label"/>
+            <Property value="STRING:Hello, World!" name="text"/>
+            <ContainerProperty name="commands"/>
+        </DesignComponent>
+        <DesignComponent uid="5" id="exitCommand" typeid="MIDP:javax.microedition.lcdui.Command">
+            <Property value="STRING:Exit" name="label"/>
+            <Property value="1" name="priority"/>
+            <Property value="EXIT" name="type"/>
+        </DesignComponent>
+    </DesignDocument>
+    <FlowDocument version="1.1"/>
+</MVDData>
